@@ -27,7 +27,6 @@ const address = formatAddress({
   region: "New York",
   city: "Kingston",
   addressLines: ["132, My Street"],
-  country: "United States",
   postalCode: "12401",
   countryCode: "US",
 });
@@ -61,7 +60,6 @@ const address = formatAddress(
 	"Mr John Smith
 	132, My Street
 	Kingston, New York 12401
-	United States"
 */
 ```
 
