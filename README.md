@@ -33,25 +33,36 @@ const address = formatAddress({
 });
 
 /* 
-["Mr John Smith",
-"132, My Street",
-"Kingston, New York 12401"]
+	["Mr John Smith",
+	"132, My Street",
+	"Kingston, New York 12401"]
 */
 ```
 
 `formatAddress` returns an array of sorted lines which can then be joined to generate a string.
+This can be done automatically by passing `string` as `options.output`:
 
 ```ts
 import { formatAddress } from "tinyaddress";
 
-const address = formatAddress({
-  name: "Mr John Smith",
-  region: "New York",
-  city: "Kingston",
-  addressLines: ["132, My Street"],
-  postalCode: "12401",
-  countryCode: "US",
-}).join("\n");
+const address = formatAddress(
+  {
+    name: "Mr John Smith",
+    region: "New York",
+    city: "Kingston",
+    addressLines: ["132, My Street"],
+    postalCode: "12401",
+    countryCode: "US",
+  },
+  { output: "string" }
+);
+
+/*
+	"Mr John Smith
+	132, My Street
+	Kingston, New York 12401
+	United States"
+*/
 ```
 
 ### Properties
