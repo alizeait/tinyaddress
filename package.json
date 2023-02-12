@@ -1,4 +1,27 @@
 {
+  "version": "1.0.1",
+  "description": "A tiny (~1.6KB) universal, zero-dependency localized address formatter for postal addresses",
+  "homepage": "https://github.com/alizeait/tinyaddress#readme",
+  "bugs": {
+    "url": "https://github.com/alizeait/tinyaddress/issues"
+  },
+  "author": {
+    "name": "Ali Zeaiter",
+    "email": "rassoali.arz@gmail.com"
+  },
+  "keywords": [
+    "address",
+    "address formatter",
+    "localized address formatter",
+    "tiny",
+    "localization",
+    "country codes",
+    "address lines"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alizeait/tinyaddress.git"
+  },
   "name": "tinyaddress",
   "main": "./dist/index.js",
   "module": "./dist/esm/index.js",

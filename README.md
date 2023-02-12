@@ -1,6 +1,6 @@
 # tinyaddress ![Check](https://github.com/alizeait/tinyaddress/workflows/Check/badge.svg) ![Coverage](https://img.shields.io/codecov/c/github/alizeait/tinyaddress)
 
-> A tiny (~1.6KB) universal localized address formatter for postal addresses.
+> A tiny (~1.6KB), universal, zero-dependency localized address formatter for postal addresses.
 
 This package uses [address metadata](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata)
 from Google's [Address Data Service](https://chromium-i18n.appspot.com/ssl-address/data) to format _postal addresses_ from all over the world.
