@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2021"],
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist"
+  },
+  "include": ["./src"]
+}
