@@ -59,28 +59,27 @@ const map: Record<string, keyof Address> = {
   X: "sortingCode",
 };
 
-const regex =
-  /(?:([%n]*)([\w]{2,}[-]*[\s]*))*(?:([,]*)([\s]*))*%(N|O|A|C|S|D|Z|X)/g;
-
 export interface Options {
   format: "local" | "latin";
 }
+
+const regex = /(%n)*(\s*\w*-*\s*)*(,*\s*)*%(N|O|A|C|S|D|Z|X)/g;
 
 export const formatAddress = (address: Address, options?: Options) => {
   const fmt =
     data.get(address.countryCode)?.[options?.format === "latin" ? 1 : 0] ||
     defaultFormat;
 
-  const formattedString = fmt.replace(regex, (_, g1, g2, g3, g4, g5) => {
-    const value = address[map[g5]];
+  const formattedString = fmt.replace(regex, (_, g1, g2, g3, g4) => {
+    const value = address[map[g4]];
     if (!value) return "";
-    const newValue = g5 === "A" ? (value as string[]).join("%n") : value;
-    return `${g1 || ""}${g2 || ""}${g3 || ""}${g4 || ""}${newValue}`;
+    const newValue = g4 === "A" ? (value as string[]).join("%n") : value;
+    return `${g1 || ""}${g2 || ""}${g3 || ""}${newValue}`;
   });
 
   const formattedArray = formattedString
     .split("%n")
-    .map((f) => f.replace(/^(?:([,]*)([\s]*))*/, ""))
+    .map((f) => f.replace(/^,*\s*/, ""))
     .filter(Boolean);
 
   if (address.country) {
