@@ -4,7 +4,8 @@ import { fetch } from "undici";
 import prettier from "prettier";
 import ts, { factory } from "typescript";
 
-const defaultFormat = "%N%n%O%n%A%n%C";
+//Most commonly used address format in all countries
+const defaultFormat = "%N%n%O%n%A%n%Z %C";
 
 const chromeSslAddressUrl =
   "https://chromium-i18n.appspot.com/ssl-address/data";
