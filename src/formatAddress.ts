@@ -28,7 +28,7 @@ export interface Address {
   country?: string;
 
   /**
-   * An ISO_3166-1_alpha-2 country code for the given country. Only used to
+   * An ISO 3166-2 country code for the given country. Only used to
    * format the address and will not be included in it.
    * Use "country" field to add a country in the address
    */
@@ -60,6 +60,10 @@ const map: Record<string, keyof Address> = {
 };
 
 export interface Options {
+  /**
+   * The address format type, can be of type `local` or `latin`.
+  Default is `local`. Some countries have a `latin` alternative.
+   */
   format: "local" | "latin";
 }
 
