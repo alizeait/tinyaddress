@@ -59,7 +59,7 @@ const map: Record<string, keyof Address> = {
   X: "sortingCode",
 };
 
-export interface Options {
+export interface Options<T extends "string" | "array" = "array"> {
   /**
    * The address format type, can be of type `local` or `latin`.
   Default is `local`. Some countries have a `latin` alternative.
@@ -72,12 +72,15 @@ export interface Options {
    * `string`, which joins the array with '/n'.
    * @default array
    */
-  output?: "string" | "array";
+  output?: T;
 }
 
 const regex = /(%n)*(\s*\w*-*\s*)*(,*\s*)*%(N|O|A|C|S|D|Z|X)/g;
 
-export const formatAddress = (address: Address, options?: Options) => {
+export const formatAddress = <T extends "string" | "array" = "array">(
+  address: Address,
+  options?: Options<T>
+): T extends "string" ? string : string[] => {
   const fmt =
     data.get(address.countryCode)?.[options?.format === "latin" ? 1 : 0] ||
     defaultFormat;
@@ -99,5 +102,5 @@ export const formatAddress = (address: Address, options?: Options) => {
   }
   return options?.output === "string"
     ? formattedArray.join("\n")
-    : formattedArray;
+    : (formattedArray as any);
 };
