@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsup ./src/index.ts --format esm,cjs --legacy-output --clean --minify --dts",
-    "test": "yarn jest",
+    "test": "jest",
     "check-types": "tsc",
     "generate": "ts-node ./scripts/generate.ts"
   },

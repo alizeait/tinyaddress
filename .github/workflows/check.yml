@@ -34,8 +34,8 @@ jobs:
       - name: Check types
         run: yarn check-types
 
-      - name: Tests and Coverage
-        run: yarn run test -- --coverage
+      - name: Tests
+        run: yarn run test --coverage
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
