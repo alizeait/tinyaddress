@@ -28,7 +28,7 @@ export interface Address {
   country?: string;
 
   /**
-   * An ISO_3166-1_alpha-2 country code for the given country. Only used to
+   * An ISO 3166-2 country code for the given country. Only used to
    * format the address and will not be included in it.
    * Use "country" field to add a country in the address
    */
@@ -60,7 +60,19 @@ const map: Record<string, keyof Address> = {
 };
 
 export interface Options {
-  format: "local" | "latin";
+  /**
+   * The address format type, can be of type `local` or `latin`.
+  Default is `local`. Some countries have a `latin` alternative.
+
+   * @default local
+   */
+  format?: "local" | "latin";
+  /**
+   * The type of the output, default is a sorted array, but can be changed to
+   * `string`, which joins the array with '/n'.
+   * @default array
+   */
+  output?: "string" | "array";
 }
 
 const regex = /(%n)*(\s*\w*-*\s*)*(,*\s*)*%(N|O|A|C|S|D|Z|X)/g;
@@ -85,5 +97,7 @@ export const formatAddress = (address: Address, options?: Options) => {
   if (address.country) {
     formattedArray.push(address.country);
   }
-  return formattedArray;
+  return options?.output === "string"
+    ? formattedArray.join("\n")
+    : formattedArray;
 };

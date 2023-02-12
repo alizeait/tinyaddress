@@ -282,4 +282,43 @@ describe("formatAddress", () => {
       ]
     `);
   });
+  test("returns a string when options.output is 'string'", () => {
+    expect(
+      formatAddress(
+        {
+          name: "Name",
+          addressLines: ["Line 1"],
+          postalCode: "333333",
+          region: "GGGGG",
+          city: "City",
+          countryCode: "GG",
+        },
+        { output: "string" }
+      )
+    ).toMatchInlineSnapshot(`
+      "Name
+      Line 1
+      City
+      GUERNSEY
+      333333"
+    `);
+
+    expect(
+      formatAddress(
+        {
+          name: "Name",
+          addressLines: ["Line 1"],
+          postalCode: "333333",
+          region: "SGSGSG",
+          city: "City",
+          countryCode: "SG",
+        },
+        { output: "string" }
+      )
+    ).toMatchInlineSnapshot(`
+      "Name
+      Line 1
+      SINGAPORE 333333"
+    `);
+  });
 });
