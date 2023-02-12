@@ -63,8 +63,16 @@ export interface Options {
   /**
    * The address format type, can be of type `local` or `latin`.
   Default is `local`. Some countries have a `latin` alternative.
+
+   * @default local
    */
-  format: "local" | "latin";
+  format?: "local" | "latin";
+  /**
+   * The type of the output, default is a sorted array, but can be changed to
+   * `string`, which joins the array with '/n'.
+   * @default array
+   */
+  output?: "string" | "array";
 }
 
 const regex = /(%n)*(\s*\w*-*\s*)*(,*\s*)*%(N|O|A|C|S|D|Z|X)/g;
@@ -89,5 +97,7 @@ export const formatAddress = (address: Address, options?: Options) => {
   if (address.country) {
     formattedArray.push(address.country);
   }
-  return formattedArray;
+  return options?.output === "string"
+    ? formattedArray.join("\n")
+    : formattedArray;
 };
