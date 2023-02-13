@@ -1,4 +1,4 @@
-import { formatAddress } from "../dist";
+import { formatAddress } from "../src";
 
 describe("formatAddress", () => {
   test("does not include missing fields", () => {
