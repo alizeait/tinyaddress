@@ -1,4 +1,4 @@
-# tinyaddress ![Check](https://github.com/alizeait/tinyaddress/workflows/Check/badge.svg) ![Coverage](https://img.shields.io/codecov/c/github/alizeait/tinyaddress)
+# tinyaddress · ![License](https://img.shields.io/github/license/alizeait/tinyaddress) ![version](https://img.shields.io/npm/v/tinyaddress) ![Check](https://github.com/alizeait/tinyaddress/workflows/Check/badge.svg) ![Coverage](https://img.shields.io/codecov/c/github/alizeait/tinyaddress) ![PRs](https://img.shields.io/badge/PRs-Welcome-green)
 
 > A tiny (~1.6KB), universal, zero-dependency localized address formatter for postal addresses.
 
