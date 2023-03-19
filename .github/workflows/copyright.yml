@@ -16,7 +16,7 @@ jobs:
       - name: Add Copyright Comment
         uses: alizeait/ts-copyright-action@v1
         with:
-          copyright: Copyright (c) 2023 XXX.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree.
+          copyright: Copyright (c) 2023 Ali Zeaiter.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree.
           exclude: "fixtures/**,dist/**,node_modules/**,src/tests/**"
 
       # Open a pull request with changed files
