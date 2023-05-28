@@ -1,9 +1,3 @@
-/*
-  Copyright (c) 2023 Ali Zeaiter.
-  This source code is licensed under the MIT license found in the
-  LICENSE file in the root directory of this source tree. 
-*/
-
 /* eslint-disable @typescript-eslint/ban-types */
 // This file is autgenerated. Generate again by running 'yarn generate'.
 
@@ -312,7 +306,7 @@ export const data = new Map<CountryCode, Format>([
   ["CL", ["%N%n%O%n%A%n%Z %C%n%S"]],
   ["CM", ["%N%n%O%n%A%n%Z %C"]],
   ["CN", ["%Z%n%S%C%D%n%A%n%O%n%N", "%N%n%O%n%A%n%D%n%C%n%S, %Z"]],
-  ["CO", ["%N%n%O%n%A%n%C, %S, %Z"]],
+  ["CO", ["%N%n%O%n%A%n%D%n%C, %S, %Z"]],
   ["CR", ["%N%n%O%n%A%n%S, %C%n%Z"]],
   ["CU", ["%N%n%O%n%A%n%C %S%n%Z"]],
   ["CV", ["%N%n%O%n%A%n%Z %C%n%S"]],
@@ -327,7 +321,7 @@ export const data = new Map<CountryCode, Format>([
   ["DO", ["%N%n%O%n%A%n%Z %C"]],
   ["DZ", ["%N%n%O%n%A%n%Z %C"]],
   ["EC", ["%N%n%O%n%A%n%Z%n%C"]],
-  ["EE", ["%N%n%O%n%A%n%Z %C"]],
+  ["EE", ["%N%n%O%n%A%n%Z %C %S"]],
   ["EG", ["%N%n%O%n%A%n%C%n%S%n%Z", "%N%n%O%n%A%n%C%n%S%n%Z"]],
   ["EH", ["%N%n%O%n%A%n%Z %C"]],
   ["ER", ["%N%n%O%n%A%n%Z %C"]],
@@ -396,9 +390,9 @@ export const data = new Map<CountryCode, Format>([
   ["LK", ["%N%n%O%n%A%n%C%n%Z"]],
   ["LR", ["%N%n%O%n%A%n%Z %C"]],
   ["LS", ["%N%n%O%n%A%n%C %Z"]],
-  ["LT", ["%O%n%N%n%A%nLT-%Z %C"]],
+  ["LT", ["%O%n%N%n%A%nLT-%Z %C %S"]],
   ["LU", ["%O%n%N%n%A%nL-%Z %C"]],
-  ["LV", ["%N%n%O%n%A%n%C, %Z"]],
+  ["LV", ["%N%n%O%n%A%n%S%n%C, %Z"]],
   ["LY", ["%N%n%O%n%A%n%Z %C"]],
   ["MA", ["%N%n%O%n%A%n%Z %C"]],
   ["MC", ["%N%n%O%n%A%nMC-%Z %C %X"]],
@@ -441,7 +435,7 @@ export const data = new Map<CountryCode, Format>([
   ["PF", ["%N%n%O%n%A%n%Z %C %S"]],
   ["PG", ["%N%n%O%n%A%n%C %Z %S"]],
   ["PH", ["%N%n%O%n%A%n%D, %C%n%Z %S"]],
-  ["PK", ["%N%n%O%n%A%n%C-%Z"]],
+  ["PK", ["%N%n%O%n%A%n%D%n%C-%Z"]],
   ["PL", ["%N%n%O%n%A%n%Z %C"]],
   ["PM", ["%O%n%N%n%A%n%Z %C %X"]],
   ["PN", ["%N%n%O%n%A%n%C%n%Z"]],
@@ -452,7 +446,7 @@ export const data = new Map<CountryCode, Format>([
   ["PY", ["%N%n%O%n%A%n%Z %C"]],
   ["QA", ["%N%n%O%n%A%n%Z %C"]],
   ["RE", ["%O%n%N%n%A%n%Z %C %X"]],
-  ["RO", ["%N%n%O%n%A%n%Z %C"]],
+  ["RO", ["%N%n%O%n%A%n%Z %S %C"]],
   ["RS", ["%N%n%O%n%A%n%Z %C"]],
   ["RU", ["%N%n%O%n%A%n%C%n%S%n%Z", "%N%n%O%n%A%n%C%n%S%n%Z"]],
   ["RW", ["%N%n%O%n%A%n%Z %C"]],
